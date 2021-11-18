@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://2DMovement/Scenes/2DMovementCharacter.tscn" type="PackedScene" id=1]
+[ext_resource path="res://2DMovement/Scenes/StaticObstacle.tscn" type="PackedScene" id=2]
+
+[node name="2DMovementScene" type="Node2D"]
+
+[node name="2DMovementCharacter" parent="." instance=ExtResource( 1 )]
+position = Vector2( 331, 259 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 509, 301 )
+
+[node name="Geometry" type="Node2D" parent="."]
+
+[node name="StaticObstacle" parent="Geometry" instance=ExtResource( 2 )]
+position = Vector2( 664, 279 )
