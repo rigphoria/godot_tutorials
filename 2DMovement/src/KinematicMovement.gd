@@ -26,11 +26,9 @@ func _process(delta):
 	#if both axes have movement use a diagonal multipler to slow them down
 	if velocity.x != 0 && velocity.y != 0:
 		velocity *= diagonalMultiplier;
-		velocity *= delta
-	else:
-		velocity *= delta
 
-	print(velocity)
+	#multiply by delta to get framerate-independent movement
+	velocity *= delta
 
 	#use our velocity value to actually move
 	velocity = move_and_slide(velocity)
